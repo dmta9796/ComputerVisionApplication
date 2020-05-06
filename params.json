@@ -1,0 +1,38 @@
+{
+    "input": "Traffic.MP4",
+    "output": "output.AVI",
+    "lktemplate":{
+        "lk_params_maxLevel":1,
+        "lk_params_criteria_EPS": 3,
+        "lk_params_criteria_COUNT": 1
+    },
+    "lkflow":{
+        "feature_params_maxCorners": 500,
+        "feature_params_qualityLevel": 0.3,
+        "feature_params_minDistance": 50,
+        "feature_params_blockSize": 7,
+        "lk_params_winSize":[15,15],
+        "lk_params_maxLevel":2,
+        "lk_params_criteria_EPS": 10,
+        "lk_params_criteria_COUNT": 0.03
+    },
+    "lkcomponents":{
+        "feature_params_maxCorners": 500,
+        "feature_params_qualityLevel": 0.1,
+        "feature_params_minDistance": 25,
+        "feature_params_blockSize": 7,
+        "lk_params_winSize":[25,25],
+        "lk_params_maxLevel":2,
+        "lk_params_criteria_EPS": 10,
+        "lk_params_criteria_COUNT": 0.03,
+        "lossthreshold": 0.4
+    },
+    "meanshift":{
+        "binstep":1,
+        "maskrange":[0,30,16,180,255,255]
+    },
+    "camshift":{
+        "binstep":1,
+        "maskrange":[0,60,32,180,255,255]
+    }
+}
